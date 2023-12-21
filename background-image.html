@@ -1,0 +1,107 @@
+<!-- 
+
+Set the table up for the background image
+<table role="none" style="width:640px;" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+
+The td has all of the CSS / HTML for background images across clients:
+
+bgcolor="#000000" - This is the fallback background color if CSS is not supported
+
+background="" - The HTML background image needs to be set for T-online but also works fine across the majority of email clients as a fallback
+
+Next we set the width / height - you can leave the height attribute on the td if you want it to be 'auto' but you will need to still set a height in the VML below.
+
+In the style block we set the background image with shorthand CSS:
+background: url(https://via.placeholder.com/640x400) center / cover no-repeat #000000;
+
+The above makes background images work on GANGA and provides the CSS background image url for all other email clients.
+
+Next we set some of the properties in long hand:
+background-position: center; background-size: cover; background-repeat: no-repeat;
+
+This is because Yahoo/AOL won't listen to the shorthand CSS before it. (This is due to the '/' in the code.)
+
+
+    <td align="center" bgcolor="#000000" background="https://via.placeholder.com/640x400" width="640" height="400" valign="top" style="background: url(https://via.placeholder.com/640x400) center / cover no-repeat #000000; background-position: center; background-size: cover; background-repeat: no-repeat;">
+
+Next the VML:
+ T   majority here is self explainatory:
+
+v:image - we set the background image properties - 
+fill="true" - this is to fill the area with the image
+stroke="false" - this says no border
+width: 480pt and height: 300pt - These are set in Points (pt) so Outlook and Windows 10 can set them exactly as you want. 
+
+To get points:
+
+Pixels x 0.75 = Points
+
+640px x 0.75 = 480pt
+
+Make sure to set all the width and height atrributes.
+
+The v:fill property controls the background color below the image - so change that hex code:
+
+color="#000000"
+
+Then v:textbox sets the position of the HTML over the image - inset="0,0,0,0" means top left corner.
+
+      <!--[if gte mso 9]>
+      <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 480pt; height: 300pt;" src="https://via.placeholder.com/640x400" />
+      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block;position: absolute; width: 480pt; height:300pt;">
+        <v:fill opacity="0%" color="#000000" />
+        <v:textbox inset="0,0,0,0">
+      <![endif]-->
+
+<!-- Then set the table up for the content over the background image:
+
+              <table role="none" style="width:640px;" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="center">CONTENT</td>
+                </tr>
+              </table>
+
+ <!-- 
+
+Close the VML tags:
+
+      <!--[if gte mso 9]>
+        </v:textbox>
+      </v:rect>
+      <![endif]-->
+
+<!-- Close the table 
+
+    </td>
+  </tr>
+</table>
+
+
+
+All the code together below: 
+
+-->
+
+
+<table role="none" style="width:640px;" cellpadding="0" cellspacing="0" border="0" class="w100pc">
+  <tr>
+    <td align="center" bgcolor="#000000" background="https://via.placeholder.com/640x400" width="640" height="400" valign="top" style="background: url(https://via.placeholder.com/640x400) center / cover no-repeat #000000; background-position: center; background-size: cover; background-repeat: no-repeat;" class="w100pc">
+      <!--[if gte mso 9]>
+      <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style=" border: 0;display: inline-block; width: 480pt; height: 300pt;" src="https://via.placeholder.com/640x400" />
+      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="f" stroke="false" style="border: 0;display: inline-block;position: absolute; width: 480pt; height:300pt;">
+        <v:fill opacity="0%" color="#000000" />
+        <v:textbox inset="0,0,0,0">
+      <![endif]-->
+              <table role="none" style="width:640px;" cellpadding="0" cellspacing="0" border="0" class="w100pc">
+                <tr>
+                  <td align="center">CONTENT</td>
+                </tr>
+              </table>
+      <!--[if gte mso 9]>
+        </v:textbox>
+      </v:rect>
+      <![endif]-->
+    </td>
+  </tr>
+</table>
