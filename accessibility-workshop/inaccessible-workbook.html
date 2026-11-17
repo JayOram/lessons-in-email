@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="x-apple-disable-message-reformatting" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      table {
+        border-collapse: collapse;
+        mso-table-lspace: 0;
+        mso-table-rspace: 0;
+      }
+
+      u+.body a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+    </style>
+    <style>
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      a {
+        color:inherit;
+        mso-color-alt: windowtext;
+        text-decoration: none;
+      }
+
+      span.MsoHyperlink {
+        color: inherit !important;
+        mso-style-priority: 99 !important;
+      }
+
+      span.MsoHyperlinkFollowed {
+        color: inherit !important;
+        mso-style-priority: 99 !important;
+      }
+    </style>
+
+    <!-- Custom fonts example -->
+    <style>
+      @media screen {
+        @font-face {
+          font-family: 'Open Sans';
+          src: url('https://fonts.bunny.net/open-sans/files/open-sans-latin-800-normal.woff2') format('woff2');
+          font-weight: bold;
+        }
+      }
+    </style>
+
+    <!-- Mobile changes -->
+    <style>
+      @media screen and (max-width:640px) {
+        .w100pc {
+          width: 100% !important;
+          min-width: 100% !important;
+          max-width: 1000px !important;
+          height: auto !important;
+        }
+
+        .show {
+          display: block !important;
+          overflow: visible !important;
+          float: none !important;
+          width: 100% !important;
+          height: auto !important;
+          max-height: inherit !important;
+        }
+
+        .nomob {
+          display: none !important;
+        }
+
+        .colsplit {
+          width: 100% !important;
+          float: left !important;
+          display: block !important;
+        }
+
+        .colsplit-top {
+          width: 100% !important;
+          display: table-row-group !important;
+        }
+
+        .colsplit-bottom {
+          width: 100% !important;
+          display: table-footer-group !important;
+        }
+
+        #MessageViewBody,
+        #MessageWebViewDiv {
+          width: 100% !important;
+        }
+      }
+    </style>
+
+
+
+    <!-- Wiggle animation CSS -->
+    <style>
+      .animate {
+        display: inline-block;
+        transform-origin: center;
+      }
+
+      @keyframes wiggle {
+        0%, 100% { transform: rotate(-10deg); }
+        50% { transform: rotate(10deg); }
+      }
+
+        input:checked ~ .animate {
+        animation: wiggle 0.3s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Checkbox toggle -->
+    <style>
+      .toggle-label { cursor: pointer; display: block; }
+      .toggle-label::before { content: "\25B6"; display: inline-block; margin-right: 6px; font-size: 0.8em; }
+      .toggle-content { display: none; }
+      .toggle:checked ~ .toggle-content { display: block !important; }
+      .toggle:checked + .toggle-label::before { content: "\25BC"; }
+    </style>
+  </head>
+  <body class="body">
+
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td align="center">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="w100pc">
+              <tr>
+                <td>
+                  <img src="https://email-placeholders.com/600x200?text=The%20Accessible%20Workbook" width="600" style="display: block; width: 100%; max-width: 600px; height: auto;" />
+                </td>
+              </tr>
+              <tr>
+                <td style="font-weight:bold; font-size: 24px;">MY MAIN TITLE</td>
+              </tr>
+              <tr>
+                <td>The accessible workbook - repeating the text in the image</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold; font-size: 18px;">My secondary title</td>
+              </tr>
+              <tr>
+                <td>lorem ipsum dolor sit amet</td>
+                  </tr>
+                  <tr>
+                    <td>
+                  <input type="checkbox" id="more-info-toggle" class="toggle" style="display: none;"/>
+                  <label for="more-info-toggle" class="toggle-label">More info</label>
+                  <div class="toggle-content">Additional details here.</div>
+                </td>
+              </tr>
+                   <tr>
+                    <td><img src="https://email-placeholders.com/600x200.gif" width="600" style="display: block; width: 100%; max-width: 600px; height: auto;" /></td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <label>
+                      <input type="checkbox" class="checkbox" style="display: none;"/>
+                        Animate
+                        <span class="animate">Wiggle</span>
+                    </label>
+                    </td>
+                  </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+    <!-- Outlook 120dpi and Advanced Typography fix -->
+    <span style="display: none">
+    <xml>
+    <o:OfficeDocumentSettings>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument>
+    <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+    </xml>
+    </span>
+    
+  </body>
+</html>
